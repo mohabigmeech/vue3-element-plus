@@ -8,14 +8,14 @@ defineProps<{
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
+      You’ve <span>successfully</span> created a project with
       <a target="_blank" href="https://vitejs.dev/">Vite</a> +
       <a target="_blank" href="https://vuejs.org/">Vue 3</a>. What's next?
     </h3>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
@@ -24,6 +24,9 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
+  span {
+    color: blue;
+  }
 }
 
 .greetings h1,
