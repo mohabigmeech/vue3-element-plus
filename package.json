@@ -1,0 +1,42 @@
+{
+  "name": "sandbox-vue3",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "npm run format && vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050",
+    "test:unit": "vitest --environment jsdom",
+    "test:e2e": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress open'",
+    "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier .  --write",
+    "clean": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore && prettier .  --write"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^1.1.4",
+    "element-plus": "^2.1.8",
+    "pinia": "^2.0.13",
+    "vue": "^3.2.31",
+    "vue-i18n": "^9.1.9",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "cypress": "^9.5.3",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^8.5.0",
+    "jsdom": "^19.0.0",
+    "prettier": "2.6.2",
+    "sass": "^1.49.11",
+    "start-server-and-test": "^1.14.0",
+    "unplugin-auto-import": "^0.6.9",
+    "unplugin-vue-components": "^0.18.5",
+    "vite": "^2.9.1",
+    "vitest": "^0.8.1"
+  }
+}
