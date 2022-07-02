@@ -12,7 +12,15 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
 .item {
   margin-top: 2rem;
   display: flex;
@@ -34,13 +42,11 @@ i {
 }
 
 h3 {
-  font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 0.4rem;
   color: var(--color-heading);
 }
 
-@media (min-width: 1024px) {
+@media #{$md-and-up} {
   .item {
     margin-top: 0;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);

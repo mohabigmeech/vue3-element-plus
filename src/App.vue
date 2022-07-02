@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
-</script>
-
 <template>
   <header>
     <img
@@ -26,8 +21,17 @@ import HelloWorld from "@/components/HelloWorld.vue";
   <RouterView />
 </template>
 
-<style>
-@import "@/assets/base.css";
+<script setup lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "@/components/HelloWorld.vue";
+</script>
+
+<style lang="scss">
+@import "@/assets/scss/main.scss";
+
+body {
+  min-height: 100vh;
+}
 
 #app {
   max-width: 1280px;
@@ -85,7 +89,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media #{$md-and-up} {
   body {
     display: flex;
     place-items: center;
